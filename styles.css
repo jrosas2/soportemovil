@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('src/fondo3.jpg');
+    background-image: url('src/fondo3.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.4); /* color para aclarar */
