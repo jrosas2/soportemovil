@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Asistencia al Usuario</title>
+
+</head>
+
+<body>
+  <header>
+    <h1>Centro de Asistencia al Usuario</h1>
+    <p>Seleccione una categoría para ver más detalles</p>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Garantías -->
+      <div class="card" onclick="toggleDetails('garantias')">
+        <div class="icon">📦</div>
+        <h2>Solicitudes y Garantías</h2>
+        <p>¿Cual es tu requerimiento?</p>
+        <div class="details" id="garantias">
+          <ul>
+            <a href="garantias/siniestros.html">
+              <li>Falla de fábrica, Pérdida, Hurto y/o Robo</li>
+            </a>
+            <a href="garantias/solicitudes.html">
+              <li>Solicitud de línea y equipos</li>
+            </a>
+            <a href="garantias/devoluciones.html">
+              <li>Devolución de línea y equipos</li>
+            </a>
+            <a href="">
+              <li>Asistencia</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Voz y Datos -->
+      <div class="card" onclick="toggleDetails('vozDatos')">
+        <div class="icon">📱</div>
+        <h2>Voz y Datos</h2>
+        <p>¿Presentas alguna falla?</p>
+        <div class="details" id="vozDatos">
+          <ul>
+            <a href="fallas_voz_datos/vozydatos.html">
+              <li>Falla de voz</li>
+              <li>Falla de datos</li>
+            </a>
+            <li>Solución de problemas</li>
+            <li>Asistencia</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Roaming -->
+      <div class="card" onclick="toggleDetails('roaming')">
+        <div class="icon">🌍</div>
+        <h2>Roaming</h2>
+        <div class="details" id="roaming">
+          <ul>
+            <a href="roamig/solicitudes_roaming.html">
+              <li>Solicitud de roaming</li>
+            </a>
+            <a href="roamig/roaming_video.html">
+              <li>Activación manual y automática</li>
+            </a>
+            <li>Fallas y soluciones</li>
+
+            <a href="roamig/roaming_paises.html">
+              <li>Países con convenio</li>
+            </a>
+            <a href="roamig/asistencia.html">
+              <li>Asistencia</li>
+            </a>
+
+            </a>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Banda Ancha Móvil -->
+      <div class="card" onclick="toggleDetails('bandaAncha')">
+        <div class="icon">💻</div>
+        <h2>Banda Ancha Móvil</h2>
+        <div class="details" id="bandaAncha">
+          <ul>
+            <li>Solicitud</li>
+            <a href="bam/bam_config.html">
+              <li>Configuración</li>
+            </a>
+            <a href="bam/bam.html">
+              <li>Fallas</li>
+            </a>
+            <a href="">
+              <li>Soluciones</li>
+            </a>
+            <li>Garantías</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Botones flotantes -->
+    <div class="floating-buttons">
+      <!-- WhatsApp -->
+      <a href="https://wa.me/56922922310" target="_blank">
+        <img src="src/whatsapp.png" alt="WhatsApp">
+      </a>
+
+      <!-- Correo -->
+      <a href="mailto:soporte.movil@carabineros.cl" target="_blank">
+        <img src="src/email.png" alt="Correo">
+      </a>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2025 - Taller Telefonía Móvil T.I.C
+  </footer>
+
+  <script>
+    // Seleccionamos todas las tarjetas
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+      const details = card.querySelector('.details');
+
+      // Inicialmente oculto
+      details.style.display = "none";
+
+      // Mostrar detalles al pasar el mouse
+      card.addEventListener("mouseenter", () => {
+        details.style.display = "block";
+      });
+
+      // Ocultar detalles al salir del mouse
+      card.addEventListener("mouseleave", () => {
+        details.style.display = "none";
+      });
+    });
+
+    function toggleDetails(id) {
+      const section = document.getElementById(id);
+      section.style.display = section.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+
+
+</body>
+
+</html>

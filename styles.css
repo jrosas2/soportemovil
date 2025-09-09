@@ -1,0 +1,153 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('src/fondo1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.4); /* color para aclarar */
+    background-blend-mode: darken;  /* mezcla la imagen con el color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 100% de la altura de la ventana */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background: #15503d; /* Verde institucional */
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Contenedor de tarjetas */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+
+    /* Ajuste de altura flexible */
+    min-height: 500px; /* altura mínima en escritorio */
+    /* height: 100%;  <- eliminar esta línea */
+    overflow-y: auto;  /* scroll si el contenido supera el espacio */
+}
+
+
+/* Tarjetas */
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-top: 6px solid #ca600a; /* Detalle color institucional */
+    height: 300px; /* alto fijo */
+    overflow: hidden; /* contenido extra oculto */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 1rem;
+    color: #159fa3; /* Detalle color institucional */
+}
+
+/* Detalles ocultos por defecto */
+.details {
+    display: none;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+/* Mostrar detalles al pasar el mouse */
+.card:hover .details {
+    display: block;
+}
+
+/* Lista dentro de detalles */
+.details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.details li::before {
+    content: "✔️ ";
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background: #0b412f;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Media Queries para celulares */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr; /* una columna */
+        height: auto; /* deja que el contenedor crezca según contenido */
+        padding: 1rem;
+    }
+
+    .card {
+        height: auto; /* ajusta la altura automáticamente en móvil */
+        padding: 1rem;
+    }
+
+    li {
+        margin-bottom: 12px;   /* espacio entre enlaces */
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .icon {
+        font-size: 30px;
+    }
+}
+
+/* Botones flotantes */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;    /* separación desde el borde inferior */
+  right: 20px;     /* pegados a la derecha */
+  display: flex;
+  flex-direction: column; /* apilados uno sobre otro */
+  gap: 10px;       /* espacio entre íconos */
+  z-index: 1000;   /* siempre visibles */
+}
+
+.floating-buttons a img {
+  width: 50px;     
+  height: 50px;
+  border-radius: 50%; /* íconos redondeados */
+  background-color: #fff; /* fondo blanco */
+  padding: 8px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.floating-buttons a img:hover {
+  transform: scale(1.1); /* efecto hover */
+}
+

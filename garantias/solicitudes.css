@@ -1,0 +1,67 @@
+/* Fuente y fondo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Tarjeta */
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-top: 6px solid #307a63; /* Verde oscuro */
+}
+
+/* Título */
+.container h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #1d7d5f; /* Verde medio */
+  text-align: center;
+}
+
+/* Lista */
+.container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.container li {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: #333;
+  border-left: 4px solid #88a63d; /* Verde oliva */
+  padding-left: 10px;
+}
+
+.container .title {
+  font-weight: bold;
+  color: #159fa3; /* Verde agua */
+}
+
+/* Botón */
+button {
+  display: block;
+  margin: 0 auto;
+  background-color: #307a63; /* Verde oscuro */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #1d7d5f; /* Verde medio */
+}

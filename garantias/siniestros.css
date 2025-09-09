@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 900px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-top: 6px solid #307a63; /* Verde oscuro */
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: #1d7d5f; /* Verde medio */
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: #159fa3; /* Verde agua */
+  margin-top: 20px;
+  border-bottom: 2px solid #88a63d; /* Verde oliva */
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  color: #307a63; /* Verde oscuro */
+  margin-top: 15px;
+}
+
+p {
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  margin: 10px 0 20px 20px;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+strong {
+  color: #1d7d5f; /* Verde medio */
+}
+
+/* Botón */
+button {
+  display: block;
+  margin: 30px auto 0;
+  background-color: #307a63; /* Verde oscuro */
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #1d7d5f; /* Verde medio */
+}

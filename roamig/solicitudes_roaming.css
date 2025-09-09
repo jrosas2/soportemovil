@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #004085;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-top: 1.5rem;
+    color: #0056b3;
+    font-size: 1.3rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.antecedentes {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.antecedentes li {
+    padding: 0.3rem 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.dato {
+    font-style: italic;
+    color: #555;
+}
+
+/* Botón Regresar */
+.button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-regresar {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background-color: #307a63; /* verde oscuro */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-regresar:hover {
+    background-color: #1d7d5f; /* verde medio */
+}
+
+/* Media query para móviles */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .btn-regresar {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
