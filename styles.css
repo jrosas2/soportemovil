@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('src/fondo3.webp');
+    background-image: url('src/fondofinal.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.4); /* color para aclarar */
@@ -18,12 +18,16 @@ main {
     flex: 1;
 }
 
-header {
-    text-align: center;
+header {    
     padding: 2rem;
-    background: #0e6d1f; /* Verde institucional */
+    background: rgba(14, 109, 31, 0.5); /* Verde institucional */    
+}
+
+header h1,p {
+    text-align: center;
     color: white;
 }
+
 
 h1 {
     margin: 0;
@@ -105,7 +109,7 @@ footer {
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
-    background: #0e6d1f;
+    background: rgba(14, 109, 31, 0.5); /* Verde institucional */    
     color: white;
     margin-top: 2rem;
 }
